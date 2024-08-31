@@ -73,7 +73,7 @@
         * **2 bit** quantized image means that a sampled pont from reflection function will be mapped into one of the values in range of 0-3.
         * So, the larger size we have the more colors we can camputure. Also a we will get a smoother image  
     #### Sampling Theory
-    * [frequency, period related refresh](week1_01_01.md)
+    * [frequency, period related refresh](week_01_01.md)
 
 - [A Standardized Approach for Skin Detection: Analysis of the Literature and Case Studies](https://www.notion.so/lecture-1-d545272ec7514ba1a59cd09edbe33d70?pvs=21)
 - [Human skin detection: An unsupervised machine learning way](https://www.sciencedirect.com/science/article/pii/S1047320324000014#baep-article-footnote-id1)
