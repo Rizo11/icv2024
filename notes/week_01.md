@@ -74,6 +74,35 @@
         * So, the larger size we have the more colors we can camputure. Also a we will get a smoother image  
     #### Sampling Theory
     * [frequency, period related refresh](week_01_01.md)
+    * In digital signal processing, one of the fundamental challenges is _converting a continuous (analog) signal, like sound or an electrical signal, into a digital format that computers and other digital devices can process_. This process is called **sampling**. The key question that arises is: **How often should we sample the continuous signal to ensure that we capture all its important information?**
+    * If we sample the signal too infrequently, we risk losing important details, leading to a distorted or incomplete representation of the original signal. This problem is known as **aliasing**, where high-frequency components of the signal appear incorrectly as lower frequencies, causing errors in the digital version of the signal.
+    * However, high sampling rate produces a large volume of data to be stored and makes necessary the use of a very fast analog-to-digital converter.
+    * ![alt text](image-5.png)
+    * The **Shannon-Nyquist Theorem** (often referred to as the **Nyquist-Shannon Sampling Theorem**) is a fundamental principle in the field of digital signal processing. It provides a guideline for how frequently a continuous signal should be sampled to accurately reconstruct the original signal without losing any information.
+    * **The Shannon-Nyquist Sampling Theorem Statement**:
+      * Formal Statement: If a signal $x(t)$ contains no frequencies higher than $f_{max}$, then it can be perfectly reconstructed from its samples if the sampling rate $f_s$ is greater than or equal to $2×f_{max}$
+      * Key component:
+        * **Sampling**: Sampling is the process of converting a continuous-time signal (analog) into a discrete-time signal (digital) by taking measurements at regular intervals, called the sampling rate.
+        * **Sampling Rate** (or Sampling Frequency): This is the number of samples taken per second and is usually measured in **Hertz** (**Hz**).
+      * According to the theorem, the **Nyquist rate** is the minimum sampling rate required to accurately capture all the information from the original continuous signal. $$Nyquist Rate=2×f_{max}$$
+      * **Nyquist Frequency**  is half of the sampling rate. It represents the highest frequency that can be accurately represented when sampling a signal. If a signal contains frequencies higher than the **Nyquist frequency**, it will lead to **aliasing**.
+      * Example: If the sampling rate is 1000 Hz, the **Nyquist frequency** is 500 Hz. This means that only frequencies up to 500 Hz can be accurately captured when sampling the signal.
+      * The **Nyquist rate** is the minimum sampling rate required to avoid **aliasing**. According to the **Shannon-Nyquist theorem**, this rate must be at least twice the highest frequency component in the signal.
+      * Example: If the maximum frequency in a signal is 500 Hz, then the **Nyquist rate** (minimum sampling rate) is 1000 Hz to ensure accurate reconstruction of the signal without **aliasing**.
+    * **Aliasing** is a significant issue that occurs when high-frequency details in an image are not adequately sampled, leading to various visual distortions.
+      ![alt text](image-6.png)
+    * **Anti-Aliasing Filters**: One common method to reduce **aliasing** is to use optical or digital **anti-aliasing filters** that blur high-frequency details before sampling, thereby reducing the likelihood of **aliasing** artifacts.
+    * Aliasing can result in:
+      * **Moiré Patterns**: are unwanted, wavy, or rippling artifacts that appear when fine patterns in the image (like grids, stripes, or textures) interfere with the pixel grid of the camera sensor. These patterns are not present in the original scene but are a result of insufficient sampling and are particularly common when photographing screens or fabrics.
+      * **Jagged Edges (Staircase Effect)**: Known as "jaggies," this effect occurs when diagonal lines or curves are not sampled at a high enough resolution, causing them to appear as a series of steps rather than smooth lines. This staircase effect is particularly noticeable on edges and contours within the image, leading to a blocky or pixelated appearance.
+        ![alt text](image-7.png)
+    * Incorrect Texture Representation
+    * False Color Artifacts
+    * Loss of detail
+
+
+
+
 
 - [A Standardized Approach for Skin Detection: Analysis of the Literature and Case Studies](https://www.notion.so/lecture-1-d545272ec7514ba1a59cd09edbe33d70?pvs=21)
 - [Human skin detection: An unsupervised machine learning way](https://www.sciencedirect.com/science/article/pii/S1047320324000014#baep-article-footnote-id1)
